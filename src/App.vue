@@ -9,8 +9,5 @@ export default {
 </script>
 
 <template>
-  <div>
-    <Form />
-    <TodoList />
-  </div>
+  <Form />
 </template>

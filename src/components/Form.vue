@@ -25,17 +25,17 @@ function addNewTodo() {
 </script>
 
 <template>
-  <div>
-    <form @submit.prevent="addNewTodo">
-      <input v-model="newTitle" type="text" name="title" placeholder="Title">
-      <textarea  v-model="newContent" name="description" placeholder="Description"></textarea>
-      <button>Add new todo</button>
+  <main class="w-[650px] max-w-full mx-auto py-24">
+    <form class="flex gap-4 flex-col" @submit.prevent="addNewTodo">
+      <input class="bg-transparent" v-model="newTitle" type="text" name="title" placeholder="Title">
+      <textarea class="bg-transparent" v-model="newContent" name="description" placeholder="Description"></textarea>
+      <button class="bg-red-700 text-white py-2 px-4">Add new todo</button>
     </form>
-    
-    <ul>
-      <li v-for="todo in todos" :key="todo.id">
-        {{todo.title}}
-      </li>
-    </ul>
-  </div>
+  </main>
+
+  <ul>
+    <li v-for="todo in todos" :key="todo.id">
+      {{todo.title}}
+    </li>
+  </ul>
 </template>
